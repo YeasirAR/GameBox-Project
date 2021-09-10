@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+
+   <children>
+      <Label alignment="CENTER" layoutX="187.0" layoutY="141.0" prefHeight="169.0" prefWidth="227.0" text="This is scene 2">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="choiceBox" layoutX="226.0" layoutY="298.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
