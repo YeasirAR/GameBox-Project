@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.MainController" />
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.MainController">
+   <children>
+      <Button layoutX="64.0" layoutY="350.0" mnemonicParsing="false" onAction="#tic_tac_toe" prefHeight="62.0" prefWidth="373.0" text="Tic Tac Toe">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button layoutX="64.0" layoutY="445.0" mnemonicParsing="false" onAction="#chess" prefHeight="62.0" prefWidth="373.0" text="Chess">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Button>
+      <Button layoutX="64.0" layoutY="540.0" mnemonicParsing="false" onAction="#snake_ladder" prefHeight="62.0" prefWidth="373.0" text="Snake Ladder">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Label layoutX="64.0" layoutY="268.0" prefHeight="48.0" prefWidth="453.0" text="Select a game to continue">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="59.0" text="GameBox">
+         <font>
+            <Font name="System Bold" size="86.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

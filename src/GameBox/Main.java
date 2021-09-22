@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MainFrame.fxml"));
         primaryStage.setTitle("GameBox");
-        primaryStage.setScene(new Scene(root, 600, 450));
+        primaryStage.setScene(new Scene(root, 500, 700));
         primaryStage.show();
     }
 
