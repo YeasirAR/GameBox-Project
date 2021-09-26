@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="GameBox.Snake_Ladder">
-    <Button layoutX="258.0" layoutY="200.0" mnemonicParsing="false" text="Amar BUtton"/>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Snake_Ladder">
+   <children>
+      <Button layoutX="258.0" layoutY="200.0" mnemonicParsing="false" text="Amar BUtton" />
+   </children>
 </AnchorPane>
