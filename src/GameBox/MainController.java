@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -43,10 +44,15 @@ public class MainController {
     @FXML
     private Button connect_click;
 
+    @FXML
+    private TextArea Chat_Area;
+    @FXML
+    private TextField send_msg;
 
     public BufferedReader reader;
     public BufferedWriter writer;
-    public MainController(){
+
+    public MainController() {
         Socket sc = null;
         try {
             sc = new Socket("127.0.0.1", 6601);
@@ -59,16 +65,17 @@ public class MainController {
             e.printStackTrace();
         }
     }
+
     private String uniqueKey = null;
+
     @FXML
-    private void login_click(){
+    private void login_click() {
         try {
             String UserName = username.getText();
             uniqueKey = secret_key.getText();
-            if (UserName.length() == 0 || uniqueKey.length() == 0){
+            if (UserName.length() == 0 || uniqueKey.length() == 0) {
                 login_failed.setText("Please Enter Valid Info");
-            }
-            else {
+            } else {
                 writer.write("Login Button\n");
                 writer.write(UserName + "\n");
                 writer.write(uniqueKey + "\n");
@@ -93,14 +100,14 @@ public class MainController {
     }
 
     @FXML
-    private void connect_click(ActionEvent e){
+    private void connect_click(ActionEvent e) {
         String str = connect_key.getText();
-        if(str.length() != 0 && !uniqueKey.equals(str)){
+        if (str.length() != 0 && !uniqueKey.equals(str)) {
             try {
                 writer.write("Connection Button\n");
-                writer.write(str+"\n");
+                writer.write(str + "\n");
                 writer.flush();
-                if(reader.readLine().equals("true")){
+                if (reader.readLine().equals("true")) {
 
                     Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GameSelectionFrame.fxml")));
                     Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
@@ -108,8 +115,8 @@ public class MainController {
                     window.setScene(new Scene(parent, 900, 650));
                     window.show();
 
-                }
-                else {
+
+                } else {
                     login_failed.setVisible(true);
                 }
             } catch (IOException ex) {
@@ -118,30 +125,71 @@ public class MainController {
         }
     }
 
+    @FXML
+    private void send_button() {
+        try {
+            writer.write("ChatBox Before Game\n");
+            writer.write(send_msg.getText() + "\n");
+            writer.flush();
+//            Thread t = new Thread(){
+//                public void run() {
+//                    while (true){
+//                        String s = null;
+//                        try {
+//                            s = reader.readLine();
+//                            if(s.equals("ChatBox Before Game")){
+//                                Chat_Area.appendText(s+"\n");
+//                            }
+//                        } catch (IOException ex) {
+//                            ex.printStackTrace();
+//                        }
+//                    }
+//                }
+//            };
+//            t.start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 
     @FXML
     private void tic_tac_toe(ActionEvent e) throws IOException {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tic_Tac_Toe.fxml")));
-        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
         window.setTitle("Tic Tac Toe Game");
         window.setScene(new Scene(parent, 900, 650));
         window.show();
     }
+
     @FXML
     private void chess(ActionEvent e) throws IOException {
-        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tic_Tac_Toe.fxml")));
-        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
-        window.setTitle("Tic Tac Toe Game");
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Chess.fxml")));
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        window.setTitle("Chess Game");
         window.setScene(new Scene(parent, 900, 650));
         window.show();
     }
+
     @FXML
     private void snake_ladder(ActionEvent e) throws IOException {
-        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tic_Tac_Toe.fxml")));
-        Stage window = (Stage)((Node)e.getSource()).getScene().getWindow();
-        window.setTitle("Tic Tac Toe Game");
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Snake_Ladder.fxml")));
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        window.setTitle("Snake Ladder Game");
         window.setScene(new Scene(parent, 900, 650));
         window.show();
     }
+
+//    @Override
+//    public void run() {
+//        while (true) {
+//            try {
+//                if (reader.readLine() == null) {
+//                    System.out.println("test");
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 }

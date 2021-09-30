@@ -11,13 +11,17 @@
    <children>
       <Pane layoutY="-24.0" prefHeight="674.0" prefWidth="386.0" style="-fx-background-color: #AAADB3;">
          <children>
-            <TextArea layoutX="33.0" layoutY="155.0" prefHeight="385.0" prefWidth="321.0" />
-            <TextField layoutX="33.0" layoutY="558.0" prefHeight="45.0" prefWidth="234.0" promptText="write here">
+            <TextArea fx:id="Chat_Area" editable="false" layoutX="33.0" layoutY="155.0" prefHeight="385.0" prefWidth="321.0">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="send_msg" layoutX="33.0" layoutY="558.0" prefHeight="45.0" prefWidth="234.0" promptText="write here">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <Button layoutX="277.0" layoutY="558.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="76.0" text="Send">
+            <Button layoutX="277.0" layoutY="558.0" mnemonicParsing="false" onAction="#send_button" prefHeight="45.0" prefWidth="76.0" text="Send">
                <font>
                   <Font size="20.0" />
                </font>
@@ -51,7 +55,7 @@
                   <Font name="System Bold" size="60.0" />
                </font>
             </Label>
-            <Label layoutX="99.0" layoutY="205.0" text="Select Any to Coninute" textFill="#127fe5">
+            <Label layoutX="99.0" layoutY="205.0" text="Select Any to Continue" textFill="#127fe5">
                <font>
                   <Font size="30.0" />
                </font>

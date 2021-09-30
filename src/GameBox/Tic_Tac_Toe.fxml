@@ -7,18 +7,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16"  xmlns:fx="http://javafx.com/fxml/1"  fx:controller="GameBox.Tic_Tac_Toe">
    <children>
       <Pane layoutY="-12.0" prefHeight="662.0" prefWidth="324.0" style="-fx-background-color: #AAADB3;">
          <children>
-            <TextArea layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0" />
-            <TextField layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
+            <TextArea fx:id="Chat_List" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0" />
+            <TextField fx:id="Send_Msg" layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <Button layoutX="234.0" layoutY="559.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="70.0" text="Send">
+            <Button layoutX="234.0" layoutY="559.0" mnemonicParsing="false" onAction="#Send_Msg_Method" prefHeight="45.0" prefWidth="70.0" text="Send">
                <font>
                   <Font size="19.0" />
                </font>

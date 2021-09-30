@@ -60,10 +60,17 @@ class ServerMain implements Runnable{
                         }
                     }
                     for (ServerMain s: clients){
-                        writer.write(isFound+"\n");
-                        writer.flush();
+                        s.writer.write(isFound+"\n");
+                        s.writer.flush();
                     }
 
+                }
+                if(str.equals("ChatBox Before Game")){
+                    String msg = reader.readLine();
+                    for (ServerMain s: clients){
+                        s.writer.write(msg+"\n");
+                        s.writer.flush();
+                    }
                 }
 
             } catch (IOException e) {
