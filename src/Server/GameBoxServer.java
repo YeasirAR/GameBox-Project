@@ -27,7 +27,9 @@ class ServerMain implements Runnable{
     BufferedReader reader;
     BufferedWriter writer;
 
-    final static ArrayList<Users> user = new ArrayList<>();
+    final static ArrayList<ServerMain> clients = new ArrayList<>(2);
+    final static ArrayList<Users> user = new ArrayList<>(2);
+
 
     ServerMain(Socket sc){
         try {
@@ -35,6 +37,7 @@ class ServerMain implements Runnable{
             writer = new BufferedWriter(o);
             InputStreamReader isr = new InputStreamReader(sc.getInputStream());
             reader = new BufferedReader(isr);
+            clients.add(this);
         }
         catch (IOException e){
             e.printStackTrace();
@@ -56,8 +59,11 @@ class ServerMain implements Runnable{
                             isFound = true;
                         }
                     }
-                    writer.write(isFound+"\n");
-                    writer.flush();
+                    for (ServerMain s: clients){
+                        writer.write(isFound+"\n");
+                        writer.flush();
+                    }
+
                 }
 
             } catch (IOException e) {
