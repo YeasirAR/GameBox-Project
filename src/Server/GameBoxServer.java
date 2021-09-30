@@ -22,7 +22,6 @@ public class GameBoxServer{
             e.printStackTrace();
         }
     }
-
 }
 class ServerMain implements Runnable{
     BufferedReader reader;
@@ -45,10 +44,24 @@ class ServerMain implements Runnable{
     public void run() {
         while (true) {
             try {
-                user.add(new Users(reader.readLine(), reader.readLine()));
-                System.out.println(user);
+                String str = reader.readLine();
+                if(str.equals("Login Button")) {
+                    user.add(new Users(reader.readLine(), reader.readLine()));
+                }
+                if(str.equals("Connection Button")) {
+                    boolean isFound = false;
+                    String checkKey = reader.readLine();
+                    for (Users u:user){
+                        if(u.secret_key.equals(checkKey)){
+                            isFound = true;
+                        }
+                    }
+                    writer.write(isFound+"\n");
+                    writer.flush();
+                }
+
             } catch (IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
                 break;
             }
         }
@@ -57,10 +70,10 @@ class ServerMain implements Runnable{
 
 class Users{
     String username;
-    String password;
+    String secret_key;
 
-    public Users(String username, String password) {
+    public Users(String username, String secret_key) {
         this.username = username;
-        this.password = password;
+        this.secret_key = secret_key;
     }
 }

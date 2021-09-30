@@ -3,7 +3,6 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,47 +11,72 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.MainController">
    <children>
-      <PasswordField fx:id="password" focusTraversable="false" layoutX="526.0" layoutY="361.0" prefHeight="45.0" prefWidth="257.0" promptText="Password">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </PasswordField>
-      <TextField fx:id="username" focusTraversable="false" layoutX="526.0" layoutY="283.0" prefHeight="45.0" prefWidth="257.0" promptText="Username">
-         <font>
-            <Font size="25.0" />
-         </font>
-      </TextField>
-      <FontAwesomeIconView fx:id="userIcon" fill="#00a4ff" glyphName="USER" layoutX="461.0" layoutY="326.0" size="50" />
-      <FontAwesomeIconView fx:id="keyIcon" fill="#00a4ff" glyphName="KEY" layoutX="454.0" layoutY="404.0" size="50" text="" />
-      <Label layoutX="513.0" layoutY="195.0" prefHeight="40.0" prefWidth="284.0" text="Connection Establish ">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Label>
-      <Button fx:id="login_click" focusTraversable="false" layoutX="526.0" layoutY="455.0" mnemonicParsing="false" onAction="#login_click" prefHeight="45.0" prefWidth="257.0" text="Login">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Button>
-      <FontAwesomeIconView fill="#00a4ff" glyphName="GROUP" layoutX="586.0" layoutY="168.0" size="100" text="" />
       <Pane layoutY="-24.0" prefHeight="674.0" prefWidth="386.0" style="-fx-background-color: #AAADB3;">
          <children>
-            <Label layoutX="46.0" layoutY="406.0" prefHeight="82.0" prefWidth="295.0" text="GameBox">
+            <Label layoutX="46.0" layoutY="453.0" prefHeight="82.0" prefWidth="295.0" text="GameBox">
                <font>
                   <Font name="System Bold" size="60.0" />
                </font>
             </Label>
-            <ImageView fx:id="image" fitHeight="300.0" fitWidth="581.0" layoutX="-97.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="313.0" fitWidth="394.0" layoutX="29.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../image/logo.png" />
+                  <Image url="@image/logo.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <Label fx:id="login_failed" layoutX="497.0" layoutY="546.0" prefHeight="17.0" prefWidth="350.0" textFill="#ff3939">
-         <font>
-            <Font size="29.0" />
-         </font>
-      </Label>
+      <Pane layoutX="380.0" layoutY="-19.0" prefHeight="688.0" prefWidth="533.0">
+         <children>
+            <TextField fx:id="username" focusTraversable="false" layoutX="148.0" layoutY="307.0" prefHeight="45.0" prefWidth="257.0" promptText="Enter Name">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="secret_key" focusTraversable="false" layoutX="149.0" layoutY="386.0" prefHeight="45.0" prefWidth="257.0" promptText="Secret Key">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <FontAwesomeIconView fx:id="userIcon" disable="true" fill="#00a4ff" glyphName="USER" layoutX="82.0" layoutY="350.0" size="50" />
+            <FontAwesomeIconView fx:id="keyIcon" fill="#00a4ff" glyphName="KEY" layoutX="75.0" layoutY="429.0" size="50" text="" />
+            <Label layoutX="135.0" layoutY="220.0" prefHeight="40.0" prefWidth="284.0" text="Connection Establish ">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="login_click" focusTraversable="false" layoutX="148.0" layoutY="478.0" mnemonicParsing="false" onAction="#login_click" prefHeight="45.0" prefWidth="257.0" text="Login">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <FontAwesomeIconView fill="#00a4ff" glyphName="GROUP" layoutX="206.0" layoutY="192.0" size="100" text="" />
+            <Label fx:id="login_failed" layoutX="111.0" layoutY="573.0" prefHeight="17.0" prefWidth="350.0" textFill="#ff3939">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="connect_key" focusTraversable="false" layoutX="158.0" layoutY="421.0" prefHeight="45.0" prefWidth="257.0" promptText="Enter secret key" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextField>
+            <Label fx:id="account_created" layoutX="164.0" layoutY="282.0" text="Account is created !" textFill="#0094f7" visible="false">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="keyIcon1" fill="#00a4ff" glyphName="KEY" layoutX="75.0" layoutY="464.0" size="50" text="" visible="false" />
+            <Label fx:id="connect_label" layoutX="64.0" layoutY="344.0" text="Please enter the key of your partner" textFill="#f50065" visible="false">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button fx:id="connect_click" focusTraversable="false" layoutX="158.0" layoutY="506.0" mnemonicParsing="false" onAction="#connect_click" prefHeight="45.0" prefWidth="257.0" text="Connect" visible="false">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </Pane>
