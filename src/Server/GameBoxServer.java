@@ -67,9 +67,12 @@ class ServerMain implements Runnable{
                 }
                 if(str.equals("ChatBox Before Game")){
                     String msg = reader.readLine();
-                    for (ServerMain s: clients){
-                        s.writer.write(msg+"\n");
-                        s.writer.flush();
+                    synchronized (clients) {
+                        for (ServerMain s : clients) {
+                            s.writer.write(str + "\n");
+                            s.writer.write(msg + "\n");
+                            s.writer.flush();
+                        }
                     }
                 }
 

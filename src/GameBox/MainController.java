@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -20,6 +21,12 @@ import java.util.Objects;
 
 
 public class MainController {
+    @FXML
+    private Pane Game_Selection_Pane;
+    @FXML
+    private Pane Main_Sub_Pane1;
+    @FXML
+    private Pane Main_Sub_Pane2;
     @FXML
     private TextField username;
     @FXML
@@ -67,11 +74,13 @@ public class MainController {
     }
 
     private String uniqueKey = null;
+    private String UserName = null;
+
 
     @FXML
     private void login_click() {
         try {
-            String UserName = username.getText();
+            UserName = username.getText();
             uniqueKey = secret_key.getText();
             if (UserName.length() == 0 || uniqueKey.length() == 0) {
                 login_failed.setText("Please Enter Valid Info");
@@ -108,13 +117,10 @@ public class MainController {
                 writer.write(str + "\n");
                 writer.flush();
                 if (reader.readLine().equals("true")) {
-
-                    Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GameSelectionFrame.fxml")));
-                    Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
-                    window.setTitle("GameBox");
-                    window.setScene(new Scene(parent, 900, 650));
-                    window.show();
-
+                    Main_Sub_Pane1.setVisible(false);
+                    Main_Sub_Pane2.setVisible(false);
+                    Game_Selection_Pane.setVisible(true);
+                    t.start();
 
                 } else {
                     login_failed.setVisible(true);
@@ -124,29 +130,29 @@ public class MainController {
             }
         }
     }
+    Thread t = new Thread(){
+        @Override
+        public void run() {
+            while (true){
+                try {
+                    String str = reader.readLine();
+                    if (str.equals("ChatBox Before Game")) {
+                        String msg = reader.readLine();
+                        Chat_Area.appendText(msg + "\n");
+                    }
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+        }
+    };
 
     @FXML
     private void send_button() {
         try {
             writer.write("ChatBox Before Game\n");
-            writer.write(send_msg.getText() + "\n");
+            writer.write(UserName+": "+send_msg.getText() + "\n");
             writer.flush();
-//            Thread t = new Thread(){
-//                public void run() {
-//                    while (true){
-//                        String s = null;
-//                        try {
-//                            s = reader.readLine();
-//                            if(s.equals("ChatBox Before Game")){
-//                                Chat_Area.appendText(s+"\n");
-//                            }
-//                        } catch (IOException ex) {
-//                            ex.printStackTrace();
-//                        }
-//                    }
-//                }
-//            };
-//            t.start();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -180,16 +186,4 @@ public class MainController {
         window.show();
     }
 
-//    @Override
-//    public void run() {
-//        while (true) {
-//            try {
-//                if (reader.readLine() == null) {
-//                    System.out.println("test");
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
 }
