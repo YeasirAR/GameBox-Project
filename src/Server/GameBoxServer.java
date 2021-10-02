@@ -81,7 +81,12 @@ class ServerMain implements Runnable{
                     if(GameBoxServer.ins1==1){
                         GameBoxServer.ins1++;
                         new Tic_Tac_Toe_Server();
-                        System.out.println("Created instance");
+                    }
+                }
+                if(str.equals("Snake Ladder")){
+                    if(GameBoxServer.ins1==1){
+                        GameBoxServer.ins1++;
+                        new Snake_Ladder_Server();
                     }
                 }
 
