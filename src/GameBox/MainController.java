@@ -161,6 +161,8 @@ public class MainController {
 
     @FXML
     private void tic_tac_toe(ActionEvent e) throws IOException {
+//        writer.write("Tic Tac Toe\n");
+//        writer.flush();
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Tic_Tac_Toe.fxml")));
         Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
         window.setTitle("Tic Tac Toe Game");
