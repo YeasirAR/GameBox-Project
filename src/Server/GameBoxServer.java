@@ -6,6 +6,7 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class GameBoxServer{
+    static int ins1 = 1;
     public static void main(String[] args) {
         try {
             System.out.println("Server is waiting for client.");
@@ -29,6 +30,7 @@ class ServerMain implements Runnable{
 
     final static ArrayList<ServerMain> clients = new ArrayList<>(2);
     final static ArrayList<Users> user = new ArrayList<>(2);
+
 
 
     ServerMain(Socket sc){
@@ -75,12 +77,22 @@ class ServerMain implements Runnable{
                         }
                     }
                 }
+                if(str.equals("Tic Tac Toe")){
+                    if(GameBoxServer.ins1==1){
+                        GameBoxServer.ins1++;
+                        new Tic_Tac_Toe_Server();
+                        System.out.println("Created instance");
+                    }
+                }
 
             } catch (IOException e) {
                 System.out.println(e.getMessage());
                 break;
             }
         }
+    }
+    public static ArrayList<Users> getList(){
+        return user;
     }
 }
 

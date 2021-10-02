@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16"  xmlns:fx="http://javafx.com/fxml/1"  fx:controller="GameBox.Tic_Tac_Toe">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Tic_Tac_Toe">
    <children>
-      <Pane layoutY="-12.0" prefHeight="662.0" prefWidth="324.0" style="-fx-background-color: #AAADB3;">
+      <Pane fx:id="Pane1" layoutY="-12.0" prefHeight="662.0" prefWidth="324.0" style="-fx-background-color: #AAADB3;">
          <children>
             <TextArea fx:id="Chat_List" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0" />
             <TextField fx:id="Send_Msg" layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
@@ -29,10 +29,98 @@
             </Label>
          </children>
       </Pane>
-      <Label layoutX="486.0" layoutY="43.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
-         <font>
-            <Font name="System Bold" size="44.0" />
-         </font>
-      </Label>
+      <Pane fx:id="Pane2" layoutX="323.0" layoutY="-96.0" prefHeight="842.0" prefWidth="706.0">
+         <children>
+            <Label layoutX="159.0" layoutY="143.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+            <Button layoutX="68.0" layoutY="517.0" mnemonicParsing="false" onAction="#start_game" prefHeight="65.0" prefWidth="162.0" text="3x3 Grid">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Label layoutX="74.0" layoutY="421.0" prefHeight="46.0" prefWidth="393.0" text="Please Select Any Option" textFill="#1e2225">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Button layoutX="298.0" layoutY="517.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="162.0" text="4x4 Grid">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button layoutX="190.0" layoutY="621.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="162.0" text="Exit">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="Pane3" layoutX="323.0" layoutY="-96.0" prefHeight="842.0" prefWidth="706.0" visible="false">
+         <children>
+            <Label layoutX="159.0" layoutY="143.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
+               <font>
+                  <Font name="System Bold" size="44.0" />
+               </font>
+            </Label>
+            <Button fx:id="button1" layoutX="103.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button2" layoutX="233.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button3" layoutX="363.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button4" layoutX="103.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button5" layoutX="233.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button6" layoutX="363.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button7" layoutX="103.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button8" layoutX="233.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button fx:id="button9" layoutX="363.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Button>
+            <Button layoutX="103.0" layoutY="642.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" text="Restart">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button layoutX="301.0" layoutY="642.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" text="Exit">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
    </children>
 </Pane>
