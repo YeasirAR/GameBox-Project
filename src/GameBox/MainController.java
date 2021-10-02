@@ -187,7 +187,7 @@ public class MainController {
         Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Snake_Ladder.fxml")));
         Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
         window.setTitle("Snake Ladder Game");
-        window.setScene(new Scene(parent, 900, 650));
+        window.setScene(new Scene(parent, 986, 673));
         window.show();
     }
 
