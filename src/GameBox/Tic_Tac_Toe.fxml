@@ -11,7 +11,10 @@
    <children>
       <Pane fx:id="Pane1" layoutY="-12.0" prefHeight="662.0" prefWidth="324.0" style="-fx-background-color: #AAADB3;">
          <children>
-            <TextArea fx:id="Chat_List" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0" />
+            <TextArea fx:id="Chat_List" editable="false" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0">
+               <font>
+                  <Font size="20.0" />
+               </font></TextArea>
             <TextField fx:id="Send_Msg" layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
                <font>
                   <Font size="22.0" />
@@ -60,52 +63,52 @@
       </Pane>
       <Pane fx:id="Pane3" layoutX="323.0" layoutY="-96.0" prefHeight="842.0" prefWidth="706.0" visible="false">
          <children>
-            <Label layoutX="159.0" layoutY="143.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
+            <Label layoutX="153.0" layoutY="119.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>
             </Label>
-            <Button fx:id="button1" focusTraversable="false" layoutX="103.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button1" focusTraversable="false" layoutX="103.0" layoutY="204.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button2" focusTraversable="false" layoutX="233.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button2" focusTraversable="false" layoutX="233.0" layoutY="204.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button3" focusTraversable="false" layoutX="363.0" layoutY="243.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button3" focusTraversable="false" layoutX="363.0" layoutY="204.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button4" focusTraversable="false" layoutX="103.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button4" focusTraversable="false" layoutX="103.0" layoutY="332.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button5" focusTraversable="false" layoutX="233.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button5" focusTraversable="false" layoutX="233.0" layoutY="332.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button6" focusTraversable="false" layoutX="363.0" layoutY="371.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button6" focusTraversable="false" layoutX="363.0" layoutY="332.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button7" focusTraversable="false" layoutX="103.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button7" focusTraversable="false" layoutX="103.0" layoutY="460.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button8" focusTraversable="false" layoutX="233.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button8" focusTraversable="false" layoutX="233.0" layoutY="460.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
             </Button>
-            <Button fx:id="button9" focusTraversable="false" layoutX="363.0" layoutY="499.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
+            <Button fx:id="button9" focusTraversable="false" layoutX="363.0" layoutY="460.0" mnemonicParsing="false" onAction="#button_clicked" prefHeight="100.0" prefWidth="100.0" text=" ">
                <font>
                   <Font size="45.0" />
                </font>
@@ -120,6 +123,11 @@
                   <Font size="21.0" />
                </font>
             </Button>
+            <Label fx:id="isTurn" layoutX="222.0" layoutY="584.0" textFill="#ff0b0b">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

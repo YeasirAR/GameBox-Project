@@ -3,6 +3,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -11,11 +14,18 @@ import java.net.Socket;
 
 public class Tic_Tac_Toe {
     @FXML
-    Pane Pane1;
+    private Pane Pane1;
     @FXML
-    Pane Pane2;
+    private Pane Pane2;
     @FXML
-    Pane Pane3;
+    private Pane Pane3;
+    @FXML
+    private Label isTurn;
+    @FXML
+    private TextField Send_Msg;
+    @FXML
+    private TextArea Chat_List;
+
     @FXML
     private Button button1,button2,button3,button4,
             button5,button6,button7,button8,button9;
@@ -101,14 +111,24 @@ public class Tic_Tac_Toe {
                 while (true) {
                     String str1 = reader.readLine();
                     System.out.println(str1);
+
+                    if (str1.equals("Send Message")) {
+                        String str2 = reader.readLine();
+                        System.out.println(str2);
+                        Platform.runLater(() -> {
+                            Chat_List.appendText(str+": "+str2+"\n");
+                        });
+                    }
+
                     if (str1.equals("button1")) {
                         String str2 = reader.readLine();
                         System.out.println(str2);
+                        if(str2.equals(str))
+                            isTurn.setText("Your Turn");
                         Platform.runLater(() -> {
                             button1.setText(str2);
                             checkWinner();
                         });
-
                     }
                     if (str1.equals("button2")) {
                         String str2 = reader.readLine();
@@ -223,6 +243,10 @@ public class Tic_Tac_Toe {
         if(button1.getText().equals("X") && button2.getText().equals("X")
                 && button3.getText().equals("X")){
             System.out.println("X Won");
+            if(str.equals("X"))
+                System.out.println("YOU WON");
+            else
+                System.out.println("YOU LOSE");
         }
         else if(button4.getText().equals("X") && button5.getText().equals("X")
                 && button6.getText().equals("X")){
@@ -305,10 +329,20 @@ public class Tic_Tac_Toe {
         thread.start();
     }
 
-    public void Send_Msg_Method(ActionEvent event) {
+    @FXML
+    private void Send_Msg_Method() {
+        try {
+            writer.write("Send Message\n");
+            writer.write(Send_Msg.getText()+"\n");
+            writer.flush();
+            Send_Msg.clear();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void start_game(ActionEvent event) {
+    @FXML
+    private void start_game() {
         Pane2.setVisible(false);
         Pane3.setVisible(true);
     }

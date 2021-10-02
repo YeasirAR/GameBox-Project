@@ -153,6 +153,7 @@ public class MainController {
             writer.write("ChatBox Before Game\n");
             writer.write(UserName+": "+send_msg.getText() + "\n");
             writer.flush();
+            send_msg.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
