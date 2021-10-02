@@ -3,12 +3,19 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
 
 public class Tic_Tac_Toe {
+    @FXML
+    Pane Pane1;
+    @FXML
+    Pane Pane2;
+    @FXML
+    Pane Pane3;
     @FXML
     private Button button1,button2,button3,button4,
             button5,button6,button7,button8,button9;
@@ -18,7 +25,7 @@ public class Tic_Tac_Toe {
     public Tic_Tac_Toe() {
         Socket sc = null;
         try {
-            sc = new Socket("127.0.0.1", 6601);
+            sc = new Socket("127.0.0.1", 6602);
             OutputStreamWriter o = new OutputStreamWriter(sc.getOutputStream());
             writer = new BufferedWriter(o);
             InputStreamReader isr = new InputStreamReader(sc.getInputStream());
@@ -298,4 +305,11 @@ public class Tic_Tac_Toe {
         thread.start();
     }
 
+    public void Send_Msg_Method(ActionEvent event) {
+    }
+
+    public void start_game(ActionEvent event) {
+        Pane2.setVisible(false);
+        Pane3.setVisible(true);
+    }
 }

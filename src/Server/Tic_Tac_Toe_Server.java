@@ -7,11 +7,11 @@ import java.util.ArrayList;
 
 public class Tic_Tac_Toe_Server {
     static String str = "X";
-    public static void main(String[] args) {
+    Tic_Tac_Toe_Server() {
 
         try {
             System.out.println("Server is waiting for client.");
-            ServerSocket serverSocket = new ServerSocket(6601);
+            ServerSocket serverSocket = new ServerSocket(6602);
 
             while (true){
                 Socket sc = serverSocket.accept();
