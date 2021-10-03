@@ -20,6 +20,8 @@ public class Tic_Tac_Toe {
     @FXML
     private Pane Pane3;
     @FXML
+    private Pane Pane4;
+    @FXML
     private Label isTurn;
     @FXML
     private TextField Send_Msg;
@@ -32,6 +34,8 @@ public class Tic_Tac_Toe {
     public BufferedReader reader;
     public BufferedWriter writer;
     private String str;
+    private String name;
+
     public Tic_Tac_Toe() {
         Socket sc = null;
         try {
@@ -114,17 +118,13 @@ public class Tic_Tac_Toe {
 
                     if (str1.equals("Send Message")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
-                            Chat_List.appendText(str+": "+str2+"\n");
+                            Chat_List.appendText(str2+"\n");
                         });
                     }
 
                     if (str1.equals("button1")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
-                        if(str2.equals(str))
-                            isTurn.setText("Your Turn");
                         Platform.runLater(() -> {
                             button1.setText(str2);
                             checkWinner();
@@ -132,7 +132,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button2")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button2.setText(str2);
                             checkWinner();
@@ -141,7 +140,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button3")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button3.setText(str2);
                             checkWinner();
@@ -150,7 +148,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button4")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button4.setText(str2);
                             checkWinner();
@@ -159,7 +156,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button5")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button5.setText(str2);
                             checkWinner();
@@ -168,7 +164,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button6")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button6.setText(str2);
                             checkWinner();
@@ -177,7 +172,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button7")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button7.setText(str2);
                             checkWinner();
@@ -186,7 +180,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button8")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button8.setText(str2);
                             checkWinner();
@@ -195,7 +188,6 @@ public class Tic_Tac_Toe {
                     }
                     if (str1.equals("button9")) {
                         String str2 = reader.readLine();
-                        System.out.println(str2);
                         Platform.runLater(() -> {
                             button9.setText(str2);
                             checkWinner();
@@ -323,6 +315,7 @@ public class Tic_Tac_Toe {
     public void initialize() {
         try {
             str = reader.readLine();
+            name = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -333,7 +326,7 @@ public class Tic_Tac_Toe {
     private void Send_Msg_Method() {
         try {
             writer.write("Send Message\n");
-            writer.write(Send_Msg.getText()+"\n");
+            writer.write(name+": "+Send_Msg.getText()+"\n");
             writer.flush();
             Send_Msg.clear();
         } catch (IOException e) {
@@ -345,5 +338,10 @@ public class Tic_Tac_Toe {
     private void start_game() {
         Pane2.setVisible(false);
         Pane3.setVisible(true);
+    }
+    @FXML
+    private void start_game_4x4() {
+        Pane2.setVisible(false);
+        Pane4.setVisible(true);
     }
 }

@@ -69,7 +69,6 @@ public class Snake_Ladder {
             Random random = new Random();
             int dice_roll = random.nextInt(6);
             dice_n = dice_arr[dice_roll];
-            dice.setText(String.valueOf(dice_n));
             //  i++;
         } else {
             turn.setText("Player 1 Turn");
@@ -77,9 +76,9 @@ public class Snake_Ladder {
             Random random = new Random();
             int dice_roll = random.nextInt(6);
             dice_n = dice_arr[dice_roll];
-            dice.setText(String.valueOf(dice_n));
             //   i++;
         }
+        dice.setText(String.valueOf(dice_n));
         writer.write("Dice\n");
         writer.write(dice_n + "\n");
         writer.flush();

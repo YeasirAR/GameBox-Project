@@ -6,11 +6,12 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Tic_Tac_Toe_Server {
+    final static ArrayList<Users> users = Server.ServerMain.getList();
     static String str = "X";
+    static String player1 = users.get(0).username;
+    static String player2 = users.get(1).username;
     Tic_Tac_Toe_Server() {
-
         try {
-            System.out.println("Server is waiting for client.");
             ServerSocket serverSocket = new ServerSocket(6602);
 
             while (true){
@@ -31,7 +32,6 @@ class TicTacToeServer implements Runnable {
 
     final static ArrayList<TicTacToeServer> clients = new ArrayList<>(2);
 
-
     TicTacToeServer(Socket sc) {
         try {
             OutputStreamWriter o = new OutputStreamWriter(sc.getOutputStream());
@@ -49,12 +49,12 @@ class TicTacToeServer implements Runnable {
         try {
             writer.write(Tic_Tac_Toe_Server.str+"\n");
             Tic_Tac_Toe_Server.str = "O";
+            writer.write(Tic_Tac_Toe_Server.player1+"\n");
+            Tic_Tac_Toe_Server.player1 = Tic_Tac_Toe_Server.player2;
             writer.flush();
             while (true) {
                 String str1 = reader.readLine();
                 String str2 = reader.readLine();
-                System.out.println(str1);
-                System.out.println(str2);
                 synchronized (clients) {
                     for (TicTacToeServer s : clients) {
                         s.writer.write(str1 + "\n");
