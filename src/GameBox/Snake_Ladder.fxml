@@ -633,6 +633,6 @@
          </font>
       </Label>
       <Label fx:id="reset1" layoutX="410.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
-      <Label fx:id="reset2" layoutX="701.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
+      <Label layoutX="701.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
    </children>
 </Pane>

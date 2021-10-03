@@ -1,11 +1,14 @@
 package GameBox;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
@@ -90,8 +93,9 @@ public class Snake_Ladder {
         block_roll.setVisible(false);
     }
     @FXML
-    private void exit(){
-
+    public void exit(ActionEvent actionEvent) {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.close();
     }
     @FXML
     private void roll() throws IOException {
