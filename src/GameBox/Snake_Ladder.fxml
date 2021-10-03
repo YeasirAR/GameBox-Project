@@ -473,7 +473,7 @@
             <Font size="1.0" />
          </font>
       </Label>
-      <Pane fx:id="Player2" layoutX="-67.0" layoutY="-105.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;">
+      <Pane fx:id="Player2" layoutX="-67.0" layoutY="-105.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;" visible="false">
          <children>
             <Label prefHeight="100.0" prefWidth="372.0" text="Game Over!!! Player 2 Win !!!" textAlignment="JUSTIFY">
                <font>
@@ -484,7 +484,7 @@
             <Button layoutX="233.0" layoutY="114.0" mnemonicParsing="false" text="Exit" />
          </children>
       </Pane>
-      <Pane fx:id="Player1" layoutX="431.0" layoutY="-93.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;">
+      <Pane fx:id="Player1" layoutX="431.0" layoutY="-93.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;" visible="false">
          <children>
             <Label layoutX="4.0" layoutY="2.0" prefHeight="100.0" prefWidth="365.0" text="Game Over!!! Player 1 Win !!!">
                <font>
