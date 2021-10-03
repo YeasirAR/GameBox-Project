@@ -9,7 +9,6 @@ public class Snake_Ladder_Server {
     static String str = "Player1";
     Snake_Ladder_Server(){
         try{
-            System.out.println("Server is waiting for client.");
             ServerSocket server_socket = new ServerSocket(6603);
             while(true){
                 Socket sc = server_socket.accept();
