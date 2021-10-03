@@ -9,9 +9,7 @@ public class GameBoxServer{
     static int ins1 = 1;
     public static void main(String[] args) {
         try {
-            System.out.println("Server is waiting for client.");
             ServerSocket serverSocket = new ServerSocket(6601);
-
             while (true){
                 Socket sc = serverSocket.accept();
                 ServerMain serverMain = new ServerMain(sc);

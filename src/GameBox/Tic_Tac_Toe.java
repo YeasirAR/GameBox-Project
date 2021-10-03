@@ -31,6 +31,12 @@ public class Tic_Tac_Toe {
     @FXML
     private Button button1,button2,button3,button4,
             button5,button6,button7,button8,button9;
+    @FXML
+    private Button button11,button12,button13,button14,
+            button15,button16,button17,button18,button19,
+            button20,button21,button22,button23,button24,
+            button25,button26;
+
     public BufferedReader reader;
     public BufferedWriter writer;
     private String str;
@@ -54,59 +60,131 @@ public class Tic_Tac_Toe {
     public void button_clicked(ActionEvent event) throws IOException {
 
         if(event.getSource() == button1){
-            System.out.println("1 clicked");
             writer.write("button1\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button2){
-            System.out.println("2 clicked");
             writer.write("button2\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button3){
-            System.out.println("3 clicked");
             writer.write("button3\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button4){
-            System.out.println("4 clicked");
             writer.write("button4\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button5){
-            System.out.println("5 clicked");
             writer.write("button5\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button6){
-            System.out.println("6 clicked");
             writer.write("button6\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button7){
-            System.out.println("7 clicked");
             writer.write("button7\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button8){
-            System.out.println("8 clicked");
             writer.write("button8\n");
             writer.write(str+"\n");
             writer.flush();
         }
         if(event.getSource() == button9){
-            System.out.println("9 clicked");
             writer.write("button9\n");
             writer.write(str+"\n");
             writer.flush();
         }
+        if(event.getSource() == button11){
+            writer.write("button11\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button12){
+            writer.write("button12\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button13){
+            writer.write("button13\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button14){
+            writer.write("button14\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button15){
+            writer.write("button15\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button16){
+            writer.write("button16\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button17){
+            writer.write("button17\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button18){
+            writer.write("button18\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button19){
+            writer.write("button19\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button20){
+            writer.write("button20\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button21){
+            writer.write("button21\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button22){
+            writer.write("button22\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button23){
+            writer.write("button23\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button24){
+            writer.write("button24\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button25){
+            writer.write("button25\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+        if(event.getSource() == button26){
+            writer.write("button26\n");
+            writer.write(str+"\n");
+            writer.flush();
+        }
+
     }
     Thread thread = new Thread(new Runnable() {
         @Override
@@ -186,13 +264,119 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button9")) {
+                    if (str1.equals("button11")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
-                            button9.setText(str2);
+                            button11.setText(str2);
                             checkWinner();
                         });
                     }
+                    if (str1.equals("button12")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button12.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button13")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button13.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button14")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button14.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button15")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button15.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button16")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button16.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button17")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button17.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button18")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button18.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button19")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button19.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button20")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button20.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button21")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button21.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button22")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button22.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button23")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button23.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button24")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button24.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button25")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button25.setText(str2);
+                            checkWinner();
+                        });
+                    }
+                    if (str1.equals("button26")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button26.setText(str2);
+                            checkWinner();
+                        });
+                    }
+
                     if (str1.equals("restart")) {
                         reader.readLine();
                         Platform.runLater(() -> {
@@ -205,6 +389,22 @@ public class Tic_Tac_Toe {
                             button7.setText(" ");
                             button8.setText(" ");
                             button9.setText(" ");
+                            button11.setText(" ");
+                            button12.setText(" ");
+                            button13.setText(" ");
+                            button14.setText(" ");
+                            button15.setText(" ");
+                            button16.setText(" ");
+                            button17.setText(" ");
+                            button18.setText(" ");
+                            button19.setText(" ");
+                            button20.setText(" ");
+                            button21.setText(" ");
+                            button22.setText(" ");
+                            button23.setText(" ");
+                            button24.setText(" ");
+                            button25.setText(" ");
+                            button26.setText(" ");
                         });
                     }
                 }
@@ -309,6 +509,101 @@ public class Tic_Tac_Toe {
                 && !button9.getText().equals(" ")) {
             System.out.println("Draw");
         }
+        //for 4x4 tic_tac_toe
+        // X WON
+        else if(button11.getText().equals("X") && button12.getText().equals("X")
+                && button13.getText().equals("X") && button14.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button15.getText().equals("X") && button16.getText().equals("X")
+                && button17.getText().equals("X") && button18.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button19.getText().equals("X") && button20.getText().equals("X")
+                && button21.getText().equals("X") && button22.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button23.getText().equals("X") && button23.getText().equals("X")
+                && button25.getText().equals("X") && button26.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button11.getText().equals("X") && button15.getText().equals("X")
+                && button19.getText().equals("X") && button23.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button12.getText().equals("X") && button16.getText().equals("X")
+                && button20.getText().equals("X") && button24.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button13.getText().equals("X") && button17.getText().equals("X")
+                && button21.getText().equals("X") && button25.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button14.getText().equals("X") && button18.getText().equals("X")
+                && button22.getText().equals("X") && button26.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button11.getText().equals("X") && button16.getText().equals("X")
+                && button21.getText().equals("X") && button26.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        else if(button14.getText().equals("X") && button17.getText().equals("X")
+                && button20.getText().equals("X") && button23.getText().equals("X")){
+            System.out.println("X Won");
+        }
+        // O WON
+        else if(button11.getText().equals("O") && button12.getText().equals("O")
+                && button13.getText().equals("O") && button14.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button15.getText().equals("O") && button16.getText().equals("O")
+                && button17.getText().equals("O") && button18.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button19.getText().equals("O") && button20.getText().equals("O")
+                && button21.getText().equals("O") && button22.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button23.getText().equals("O") && button23.getText().equals("O")
+                && button25.getText().equals("O") && button26.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button11.getText().equals("O") && button15.getText().equals("O")
+                && button19.getText().equals("O") && button23.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button12.getText().equals("O") && button16.getText().equals("O")
+                && button20.getText().equals("O") && button24.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button13.getText().equals("O") && button17.getText().equals("O")
+                && button21.getText().equals("O") && button25.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button14.getText().equals("O") && button18.getText().equals("O")
+                && button22.getText().equals("O") && button26.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button11.getText().equals("O") && button16.getText().equals("O")
+                && button21.getText().equals("O") && button26.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        else if(button14.getText().equals("O") && button17.getText().equals("O")
+                && button20.getText().equals("O") && button23.getText().equals("O")){
+            System.out.println("O Won");
+        }
+        // DRAW
+        else if(!button11.getText().equals(" ") && !button12.getText().equals(" ")
+                && !button13.getText().equals(" ") && !button14.getText().equals(" ")
+                && !button15.getText().equals(" ") && !button16.getText().equals(" ")
+                && !button17.getText().equals(" ") && !button18.getText().equals(" ")
+                && !button19.getText().equals(" ") && !button20.getText().equals(" ")
+                && !button21.getText().equals(" ") && !button22.getText().equals(" ")
+                && !button23.getText().equals(" ") && !button24.getText().equals(" ")
+                && !button25.getText().equals(" ") && !button26.getText().equals(" ")) {
+            System.out.println("Draw");
+        }
+
     }
 
     @FXML
