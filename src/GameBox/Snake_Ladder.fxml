@@ -4,26 +4,27 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Snake_Ladder">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="986.0" style="-fx-background-color: #E4E978;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Snake_Ladder">
    <children>
-      <Pane layoutY="6.0" prefHeight="666.0" prefWidth="259.0" style="-fx-background-color: #AAADB3;">
+      <Pane prefHeight="666.0" prefWidth="259.0" style="-fx-background-color: #D37815;">
          <children>
             <Label layoutX="52.0" layoutY="41.0" prefHeight="53.0" prefWidth="196.0" text="Discussion">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <TextField fx:id="send_msg" layoutX="20.0" layoutY="583.0" prefHeight="33.0" prefWidth="178.0" promptText="write here" style="-fx-background-color: #FCF7F7;" text="write here">
+            <TextField fx:id="send_msg" layoutX="20.0" layoutY="583.0" prefHeight="33.0" prefWidth="178.0" promptText="write here" style="-fx-background-color: #FCF7F7;">
                <font>
-                  <Font name="Times New Roman" size="14.0" />
+                  <Font name="Arial Black" size="15.0" />
                </font>
             </TextField>
-            <Button layoutX="198.0" layoutY="584.0" mnemonicParsing="false" onAction="#send_button" prefHeight="32.0" prefWidth="52.0" text="send">
+            <Button layoutX="198.0" layoutY="584.0" mnemonicParsing="false" onAction="#send_button" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: #A3D2CA;" text="send">
                <font>
                   <Font size="14.0" />
                </font>
@@ -46,454 +47,587 @@
             <Label fx:id="label_1" layoutX="3.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="1">
                <font>
                   <Font size="3.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_2" layoutX="62.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="2">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_3" layoutX="120.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="3">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_4" layoutX="172.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="4">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_5" layoutX="224.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="5">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_6" layoutX="276.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="6">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_7" layoutX="328.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="7">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_8" layoutX="380.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="8">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_9" layoutX="441.0" layoutY="455.0" prefHeight="39.0" prefWidth="52.0" text="9">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_10" layoutX="502.0" layoutY="455.0" prefHeight="44.0" prefWidth="52.0" text="10">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_11" layoutX="504.0" layoutY="409.0" prefHeight="44.0" prefWidth="52.0" text="11">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_12" layoutX="441.0" layoutY="407.0" prefHeight="44.0" prefWidth="52.0" text="12">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_13" layoutX="380.0" layoutY="407.0" prefHeight="44.0" prefWidth="52.0" text="13">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_14" layoutX="328.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="14">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_15" layoutX="276.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="15">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_16" layoutX="224.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="16">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_17" layoutX="172.0" layoutY="407.0" prefHeight="44.0" prefWidth="52.0" text="17">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_18" layoutX="120.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="18">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_19" layoutX="62.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="19">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_20" layoutX="3.0" layoutY="410.0" prefHeight="39.0" prefWidth="52.0" text="20">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_21" layoutX="493.0" layoutY="361.0" prefHeight="39.0" prefWidth="61.0" text="21">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_22" layoutX="441.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="22">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_23" layoutX="380.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="23">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_24" layoutX="328.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="24">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_25" layoutX="276.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="25">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_26" layoutX="224.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="26">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_27" layoutX="172.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="27">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_28" layoutX="120.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="28">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_29" layoutX="62.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="29">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_30" layoutX="3.0" layoutY="361.0" prefHeight="39.0" prefWidth="52.0" text="30">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_31" layoutX="498.0" layoutY="310.0" prefHeight="44.0" prefWidth="52.0" text="31">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_32" layoutX="441.0" layoutY="308.0" prefHeight="44.0" prefWidth="52.0" text="32">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_33" layoutX="380.0" layoutY="313.0" prefHeight="39.0" prefWidth="61.0" text="33">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_34" layoutX="328.0" layoutY="311.0" prefHeight="44.0" prefWidth="52.0" text="34">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_35" layoutX="276.0" layoutY="311.0" prefHeight="44.0" prefWidth="52.0" text="35">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_36" layoutX="224.0" layoutY="311.0" prefHeight="44.0" prefWidth="52.0" text="36">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_37" layoutX="172.0" layoutY="309.0" prefHeight="44.0" prefWidth="52.0" text="37">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_38" layoutX="120.0" layoutY="312.0" prefHeight="44.0" prefWidth="52.0" text="38">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_39" layoutX="62.0" layoutY="315.0" prefHeight="39.0" prefWidth="52.0" text="39">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_40" layoutX="3.0" layoutY="311.0" prefHeight="44.0" prefWidth="52.0" text="40">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_41" layoutX="495.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="41">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_42" layoutX="441.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="42">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_43" layoutX="380.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="43">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_44" layoutX="328.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="44">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_45" layoutX="276.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="45">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_46" layoutX="224.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="46">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_47" layoutX="172.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="47">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_48" layoutX="120.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="48">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_49" layoutX="62.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="49">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_50" layoutX="3.0" layoutY="264.0" prefHeight="39.0" prefWidth="52.0" text="50">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_51" layoutX="495.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="51">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_52" layoutX="441.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="52">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_53" layoutX="380.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="53">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_54" layoutX="328.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="54">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_55" layoutX="276.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="55">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_56" layoutX="224.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="56">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_57" layoutX="172.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="57">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_58" layoutX="120.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="58">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_59" layoutX="62.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="59">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_60" layoutX="3.0" layoutY="217.0" prefHeight="39.0" prefWidth="52.0" text="60">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_61" layoutX="498.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="61">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_62" layoutX="441.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="62">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_63" layoutX="380.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="63">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_64" layoutX="328.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="64">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_65" layoutX="276.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="65">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_66" layoutX="224.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="66">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_67" layoutX="172.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="67">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_68" layoutX="120.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="68">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_69" layoutX="62.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="69">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_70" layoutX="3.0" layoutY="170.0" prefHeight="39.0" prefWidth="52.0" text="70">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_71" layoutX="498.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="71">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_72" layoutX="441.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="72">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_73" layoutX="380.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="73">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_74" layoutX="328.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="74">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_75" layoutX="276.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="75">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_76" layoutX="224.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="76">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_77" layoutX="172.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="77">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_78" layoutX="120.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="78">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_79" layoutX="62.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="79">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_80" layoutX="3.0" layoutY="123.0" prefHeight="39.0" prefWidth="52.0" text="80">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_81" layoutX="501.0" layoutY="78.0" prefHeight="39.0" prefWidth="46.0" text="81">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_82" layoutX="441.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="82">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_83" layoutX="385.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="83">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_84" layoutX="328.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="84">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_85" layoutX="276.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="85">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_86" layoutX="224.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="86">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_87" layoutX="172.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="87">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_88" layoutX="120.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="88">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_89" layoutX="62.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="89">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_90" layoutX="3.0" layoutY="78.0" prefHeight="39.0" prefWidth="52.0" text="90">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_91" layoutX="501.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="91">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_92" layoutX="441.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="92">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_93" layoutX="385.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="93">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_94" layoutX="328.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="94">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_95" layoutX="276.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="95">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_96" layoutX="224.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="96">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_97" layoutX="172.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="97">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_98" layoutX="120.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="98">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_99" layoutX="62.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="99">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label fx:id="label_100" layoutX="1.0" layoutY="32.0" prefHeight="39.0" prefWidth="52.0" text="100">
                <font>
                   <Font size="1.0" />
-               </font></Label>
+               </font>
+            </Label>
+            <Pane fx:id="Player2" layoutX="84.0" layoutY="141.0" opacity="0.92" prefHeight="153.0" prefWidth="386.0" style="-fx-background-color: #D37815;" visible="false">
+               <children>
+                  <Label layoutX="19.0" prefHeight="100.0" prefWidth="353.0" text="Game Over!! Player 2 Win !!!" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="88.0" layoutY="99.0" mnemonicParsing="false" onAction="#restart" style="-fx-background-color: #FFB319;" text="Restart">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="235.0" layoutY="99.0" mnemonicParsing="false" onAction="#exit" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #F05945;" text="Exit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <Blend mode="HARD_LIGHT" opacity="0.5" />
+               </effect>
+            </Pane>
+            <Pane fx:id="Player1" layoutX="83.0" layoutY="94.0" opacity="0.92" prefHeight="153.0" prefWidth="386.0" style="-fx-background-color: #D37815;" visible="false">
+               <children>
+                  <Label layoutX="17.0" prefHeight="100.0" prefWidth="353.0" text="Game Over!! Player 1 Win !!!" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="88.0" layoutY="99.0" mnemonicParsing="false" onAction="#restart" style="-fx-background-color: #FFB319;" text="Restart">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="235.0" layoutY="99.0" mnemonicParsing="false" onAction="#exit" prefHeight="33.0" prefWidth="52.0" style="-fx-background-color: #F05945;" text="Exit">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <Blend mode="HARD_LIGHT" opacity="0.5" />
+               </effect>
+            </Pane>
          </children>
       </Pane>
-      <Pane layoutX="818.0" prefHeight="666.0" prefWidth="169.0" style="-fx-background-color: #AAADB3;">
+      <Pane layoutX="824.0" prefHeight="666.0" prefWidth="169.0" style="-fx-background-color: #D37815;">
          <children>
-            <Button layoutX="42.0" layoutY="209.0" mnemonicParsing="false" onAction="#roll" prefHeight="44.0" prefWidth="68.0" style="-fx-background-color: #1D1E08;" text="Roll" textAlignment="JUSTIFY" textFill="WHITE">
+            <Button layoutX="42.0" layoutY="209.0" mnemonicParsing="false" onAction="#roll" prefHeight="44.0" prefWidth="68.0" style="-fx-background-color: #1D1E08;" text="Roll" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Label fx:id="dice" layoutX="45.0" layoutY="124.0" prefHeight="65.0" prefWidth="61.0" style="-fx-background-color: #FFFFFF;" text="Dice" textFill="#97770e">
+            <Label fx:id="dice" layoutX="45.0" layoutY="124.0" prefHeight="65.0" prefWidth="61.0" style="-fx-background-color: #000000;" text="Dice" textFill="#eeedea">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="turn" layoutX="5.0" layoutY="298.0" prefHeight="53.0" prefWidth="157.0" style="-fx-background-color: #FFFFFF;" text="Player 1 turn" textFill="#24128c">
+            <Label fx:id="turn" layoutX="5.0" layoutY="298.0" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #FFFFFF;" text="Roll the Dice" textFill="#24128c">
                <font>
-                  <Font name="System Bold" size="20.0" />
+                  <Font name="Arial Black" size="20.0" />
                </font>
             </Label>
+            <Pane fx:id="block_roll" layoutX="10.0" layoutY="106.0" prefHeight="153.0" prefWidth="147.0" style="-fx-background-color: #D37815;" visible="false" />
          </children>
       </Pane>
-      <Label fx:id="guti1_label" layoutX="442.0" layoutY="618.0" prefHeight="17.0" prefWidth="18.0" style="-fx-background-color: #FF0000;" text="guti1">
+      <Label fx:id="guti1_label" layoutX="410.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #FF0000;" text="1" textAlignment="JUSTIFY">
          <font>
-            <Font size="1.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="guti2_label" layoutX="475.0" layoutY="618.0" prefHeight="17.0" prefWidth="18.0" style="-fx-background-color: #0000FF;" text="guti2">
+      <Label fx:id="guti2_label" layoutX="701.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #3DB2FF;" text="2">
          <font>
-            <Font size="1.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Pane fx:id="Player2" layoutX="-67.0" layoutY="-105.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;" visible="false">
-         <children>
-            <Label prefHeight="100.0" prefWidth="372.0" text="Game Over!!! Player 2 Win !!!" textAlignment="JUSTIFY">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <Button layoutX="87.0" layoutY="114.0" mnemonicParsing="false" text="Restart" />
-            <Button layoutX="233.0" layoutY="114.0" mnemonicParsing="false" text="Exit" />
-         </children>
-      </Pane>
-      <Pane fx:id="Player1" layoutX="431.0" layoutY="-93.0" prefHeight="153.0" prefWidth="372.0" style="-fx-background-color: #AEAF9D;" visible="false">
-         <children>
-            <Label layoutX="4.0" layoutY="2.0" prefHeight="100.0" prefWidth="365.0" text="Game Over!!! Player 1 Win !!!">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <Button layoutX="93.0" layoutY="99.0" mnemonicParsing="false" text="Restart" />
-            <Button layoutX="231.0" layoutY="99.0" mnemonicParsing="false" text="Exit" />
-         </children>
-      </Pane>
+      <Label layoutX="349.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #FF0000;" text="Player 1 :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="640.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #3DB2FF;" text="Player 2 :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </Pane>
