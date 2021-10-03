@@ -2,15 +2,13 @@ package GameBox;import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Optional;
 
 public class Tic_Tac_Toe {
     @FXML
@@ -23,6 +21,8 @@ public class Tic_Tac_Toe {
     private Pane Pane4;
     @FXML
     private Label isTurn;
+    @FXML
+    private Label isTurn4x4;
     @FXML
     private TextField Send_Msg;
     @FXML
@@ -58,6 +58,9 @@ public class Tic_Tac_Toe {
 
     @FXML
     public void button_clicked(ActionEvent event) throws IOException {
+        writer.write("Who's Turn\n");
+        writer.write(name+"\n");
+        writer.flush();
 
         if(event.getSource() == button1){
             writer.write("button1\n");
@@ -192,7 +195,22 @@ public class Tic_Tac_Toe {
             try {
                 while (true) {
                     String str1 = reader.readLine();
-                    System.out.println(str1);
+
+                    if(str1.equals("Who's Turn")){
+                        String tmpName = reader.readLine();
+                        if(!name.equals(tmpName)){
+                            Platform.runLater(() -> {
+                                isTurn.setText("Your Turn");
+                                isTurn4x4.setText("Your Turn");
+                            });
+                        }
+                        else {
+                            Platform.runLater(() -> {
+                                isTurn.setText("");
+                                isTurn4x4.setText("");
+                            });
+                        }
+                    }
 
                     if (str1.equals("Send Message")) {
                         String str2 = reader.readLine();
@@ -262,7 +280,13 @@ public class Tic_Tac_Toe {
                             button8.setText(str2);
                             checkWinner();
                         });
-
+                    }
+                    if (str1.equals("button9")) {
+                        String str2 = reader.readLine();
+                        Platform.runLater(() -> {
+                            button9.setText(str2);
+                            checkWinner();
+                        });
                     }
                     if (str1.equals("button11")) {
                         String str2 = reader.readLine();
@@ -405,6 +429,10 @@ public class Tic_Tac_Toe {
                             button24.setText(" ");
                             button25.setText(" ");
                             button26.setText(" ");
+                            Platform.runLater(() -> {
+                                isTurn.setText("");
+                                isTurn4x4.setText("");
+                            });
                         });
                     }
                 }
@@ -434,72 +462,116 @@ public class Tic_Tac_Toe {
         //X Won
         if(button1.getText().equals("X") && button2.getText().equals("X")
                 && button3.getText().equals("X")){
-            System.out.println("X Won");
             if(str.equals("X"))
-                System.out.println("YOU WON");
+                WinDialog();
             else
-                System.out.println("YOU LOSE");
+                LoseDialog();
         }
         else if(button4.getText().equals("X") && button5.getText().equals("X")
                 && button6.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button7.getText().equals("X") && button8.getText().equals("X")
                 && button9.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button1.getText().equals("X") && button4.getText().equals("X")
                 && button7.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button2.getText().equals("X") && button5.getText().equals("X")
                 && button8.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button3.getText().equals("X") && button6.getText().equals("X")
                 && button9.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button1.getText().equals("X") && button5.getText().equals("X")
                 && button9.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button3.getText().equals("X") && button5.getText().equals("X")
                 && button7.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         // O Won
         else if(button1.getText().equals("O") && button2.getText().equals("O")
                 && button3.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button4.getText().equals("O") && button5.getText().equals("O")
                 && button6.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button7.getText().equals("O") && button8.getText().equals("O")
                 && button9.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button1.getText().equals("O") && button4.getText().equals("O")
                 && button7.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button2.getText().equals("O") && button5.getText().equals("O")
                 && button8.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button3.getText().equals("O") && button6.getText().equals("O")
                 && button9.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button1.getText().equals("O") && button5.getText().equals("O")
                 && button9.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button3.getText().equals("O") && button5.getText().equals("O")
                 && button7.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         //draw
         else if(!button1.getText().equals(" ") && !button2.getText().equals(" ")
@@ -507,90 +579,150 @@ public class Tic_Tac_Toe {
                 && !button5.getText().equals(" ") && !button6.getText().equals(" ")
                 && !button7.getText().equals(" ") && !button8.getText().equals(" ")
                 && !button9.getText().equals(" ")) {
-            System.out.println("Draw");
+            DrawDialog();
         }
         //for 4x4 tic_tac_toe
         // X WON
         else if(button11.getText().equals("X") && button12.getText().equals("X")
                 && button13.getText().equals("X") && button14.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button15.getText().equals("X") && button16.getText().equals("X")
                 && button17.getText().equals("X") && button18.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button19.getText().equals("X") && button20.getText().equals("X")
                 && button21.getText().equals("X") && button22.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button23.getText().equals("X") && button23.getText().equals("X")
                 && button25.getText().equals("X") && button26.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button11.getText().equals("X") && button15.getText().equals("X")
                 && button19.getText().equals("X") && button23.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button12.getText().equals("X") && button16.getText().equals("X")
                 && button20.getText().equals("X") && button24.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button13.getText().equals("X") && button17.getText().equals("X")
                 && button21.getText().equals("X") && button25.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button14.getText().equals("X") && button18.getText().equals("X")
                 && button22.getText().equals("X") && button26.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button11.getText().equals("X") && button16.getText().equals("X")
                 && button21.getText().equals("X") && button26.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button14.getText().equals("X") && button17.getText().equals("X")
                 && button20.getText().equals("X") && button23.getText().equals("X")){
-            System.out.println("X Won");
+            if(str.equals("X"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         // O WON
         else if(button11.getText().equals("O") && button12.getText().equals("O")
                 && button13.getText().equals("O") && button14.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button15.getText().equals("O") && button16.getText().equals("O")
                 && button17.getText().equals("O") && button18.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button19.getText().equals("O") && button20.getText().equals("O")
                 && button21.getText().equals("O") && button22.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button23.getText().equals("O") && button23.getText().equals("O")
                 && button25.getText().equals("O") && button26.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button11.getText().equals("O") && button15.getText().equals("O")
                 && button19.getText().equals("O") && button23.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button12.getText().equals("O") && button16.getText().equals("O")
                 && button20.getText().equals("O") && button24.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button13.getText().equals("O") && button17.getText().equals("O")
                 && button21.getText().equals("O") && button25.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button14.getText().equals("O") && button18.getText().equals("O")
                 && button22.getText().equals("O") && button26.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button11.getText().equals("O") && button16.getText().equals("O")
                 && button21.getText().equals("O") && button26.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         else if(button14.getText().equals("O") && button17.getText().equals("O")
                 && button20.getText().equals("O") && button23.getText().equals("O")){
-            System.out.println("O Won");
+            if(str.equals("O"))
+                WinDialog();
+            else
+                LoseDialog();
         }
         // DRAW
         else if(!button11.getText().equals(" ") && !button12.getText().equals(" ")
@@ -601,7 +733,7 @@ public class Tic_Tac_Toe {
                 && !button21.getText().equals(" ") && !button22.getText().equals(" ")
                 && !button23.getText().equals(" ") && !button24.getText().equals(" ")
                 && !button25.getText().equals(" ") && !button26.getText().equals(" ")) {
-            System.out.println("Draw");
+            DrawDialog();
         }
 
     }
@@ -638,5 +770,23 @@ public class Tic_Tac_Toe {
     private void start_game_4x4() {
         Pane2.setVisible(false);
         Pane4.setVisible(true);
+    }
+    private void WinDialog() {
+        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setTitle("YOU WON!");
+        dialog.setContentText("Congratulations! YOU WON");
+        dialog.showAndWait();
+    }
+    private void LoseDialog() {
+        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setTitle("YOU LOSE!");
+        dialog.setContentText("Better luck next time! YOU LOSE");
+        dialog.showAndWait();
+    }
+    private void DrawDialog() {
+        Alert dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setTitle("DRAW!");
+        dialog.setContentText("WELL PLAYED! MATCH DRAW!");
+        dialog.showAndWait();
     }
 }
