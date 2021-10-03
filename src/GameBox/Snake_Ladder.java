@@ -40,11 +40,14 @@ public class Snake_Ladder {
     public BufferedReader reader;
     String Player;
     String Player_name;
+    int prev_dice1 = 0;
+    int prev_dice2 = 0;
+    int dice_n;
+    int check = 1;
 
     public Snake_Ladder(){
-        Socket sc = null;
         try{
-            sc = new Socket("127.0.0.1",6603);
+            Socket sc = new Socket("127.0.0.1",6603);
             OutputStreamWriter ow = new OutputStreamWriter(sc.getOutputStream());
             writer = new BufferedWriter(ow);
             InputStreamReader isr = new InputStreamReader(sc.getInputStream());
@@ -82,10 +85,6 @@ public class Snake_Ladder {
     private void exit(){
 
     }
-    int prev_dice1 = 0;
-    int prev_dice2 = 0;
-    int dice_n;
-
     @FXML
     private void roll() throws IOException {
         int[] dice_arr = {1, 2, 3, 4, 5, 6};
@@ -109,7 +108,8 @@ public class Snake_Ladder {
                         Platform.runLater(() -> Chat_Area.appendText(str2+"\n"));
                     }
                     ////PLayer1
-                    else if(str1.equals("Player1")){
+                    else if(str1.equals("Player1") && check == 1){
+                        check = 0;
 
                         Platform.runLater(() -> turn.setText("Player 2 turn"));
                         int n = Integer.parseInt(reader.readLine());
@@ -145,7 +145,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 8){
                             Platform.runLater(() -> label_8.setGraphic(guti1_label));
-                            prev_dice1 = 8;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 8){
+                                Platform.runLater(() -> label_35.setGraphic(guti1_label));
+                                prev_dice1 = 35;
+                            }
+                            else {
+                                prev_dice1 = 8;
+                            }
                         }
                         else if (n + prev_dice1 == 9){
                             Platform.runLater(() -> label_9.setGraphic(guti1_label));
@@ -221,7 +228,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 27){
                             Platform.runLater(() -> label_27.setGraphic(guti1_label));
-                            prev_dice1 = 27;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 27){
+                                Platform.runLater(() -> label_77.setGraphic(guti1_label));
+                                prev_dice1 = 77;
+                            }
+                            else {
+                                prev_dice1 = 27;
+                            }
                         }
                         else if (n + prev_dice1 == 28){
                             Platform.runLater(() -> label_28.setGraphic(guti1_label));
@@ -238,8 +252,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 31){
                             Platform.runLater(() -> label_31.setGraphic(guti1_label));
-                            prev_dice1 = 31;
-
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 31){
+                                Platform.runLater(() -> label_10.setGraphic(guti1_label));
+                                prev_dice1 = 10;
+                            }
+                            else {
+                                prev_dice1 = 31;
+                            }
                         }
                         else if (n + prev_dice1 == 32){
                             Platform.runLater(() -> label_32.setGraphic(guti1_label));
@@ -271,7 +291,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 39){
                             Platform.runLater(() -> label_39.setGraphic(guti1_label));
-                            prev_dice1 = 39;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 39){
+                                Platform.runLater(() -> label_60.setGraphic(guti1_label));
+                                prev_dice1 = 60;
+                            }
+                            else {
+                                prev_dice1 = 39;
+                            }
                         }
                         else if (n + prev_dice1 == 40){
                             Platform.runLater(() -> label_40.setGraphic(guti1_label));
@@ -327,7 +354,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 53){
                             Platform.runLater(() -> label_53.setGraphic(guti1_label));
-                            prev_dice1 = 53;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 53){
+                                Platform.runLater(() -> label_81.setGraphic(guti1_label));
+                                prev_dice1 = 81;
+                            }
+                            else {
+                                prev_dice1 = 53;
+                            }
                         }
                         else if (n + prev_dice1 == 54){
                             Platform.runLater(() -> label_54.setGraphic(guti1_label));
@@ -347,7 +381,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 58){
                             Platform.runLater(() -> label_58.setGraphic(guti1_label));
-                            prev_dice1 = 58;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 58){
+                                Platform.runLater(() -> label_28.setGraphic(guti1_label));
+                                prev_dice1 = 28;
+                            }
+                            else {
+                                prev_dice1 = 58;
+                            }
                         }
                         else if (n + prev_dice1 == 59){
                             Platform.runLater(() -> label_59.setGraphic(guti1_label));
@@ -375,7 +416,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 65){
                             Platform.runLater(() -> label_65.setGraphic(guti1_label));
-                            prev_dice1 = 65;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 65){
+                                Platform.runLater(() -> label_60.setGraphic(guti1_label));
+                                prev_dice1 = 23;
+                            }
+                            else {
+                                prev_dice1 = 65;
+                            }
                         }
                         else if (n + prev_dice1 == 66){
                             Platform.runLater(() -> label_66.setGraphic(guti1_label));
@@ -435,7 +483,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 80){
                             Platform.runLater(() -> label_80.setGraphic(guti1_label));
-                            prev_dice1 = 80;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 80){
+                                Platform.runLater(() -> label_38.setGraphic(guti1_label));
+                                prev_dice1 = 38;
+                            }
+                            else {
+                                prev_dice1 = 80;
+                            }
                         }
                         else if (n + prev_dice1 == 81){
                             Platform.runLater(() -> label_81.setGraphic(guti1_label));
@@ -455,7 +510,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 85){
                             Platform.runLater(() -> label_85.setGraphic(guti1_label));
-                            prev_dice1 = 85;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 85){
+                                Platform.runLater(() -> label_51.setGraphic(guti1_label));
+                                prev_dice1 = 51;
+                            }
+                            else {
+                                prev_dice1 = 85;
+                            }
                         }
                         else if (n + prev_dice1 == 86){
                             Platform.runLater(() -> label_86.setGraphic(guti1_label));
@@ -503,7 +565,14 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice1 == 97){
                             Platform.runLater(() -> label_97.setGraphic(guti1_label));
-                            prev_dice1 = 97;
+                            Thread.sleep(1000);
+                            if(n+prev_dice1 == 97){
+                                Platform.runLater(() -> label_15.setGraphic(guti1_label));
+                                prev_dice1 = 15;
+                            }
+                            else {
+                                prev_dice1 = 97;
+                            }
                         }
                         else if (n + prev_dice1 == 98){
                             Platform.runLater(() -> label_98.setGraphic(guti1_label));
@@ -522,7 +591,8 @@ public class Snake_Ladder {
                         }
                     }
                     ///Player2
-                    else if(str1.equals("Player2")){
+                    else if(str1.equals("Player2") && check == 0){
+                        check = 1;
 
                         Platform.runLater(() -> turn.setText("Player 1 turn"));
                         int n = Integer.parseInt(reader.readLine());
@@ -558,7 +628,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 8) {
                             Platform.runLater(() -> label_8.setGraphic(guti2_label));
-                            prev_dice2 = 8;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 8) {
+                                Platform.runLater(() -> label_35.setGraphic(guti2_label));
+                                prev_dice2 = 35;
+                            } else {
+                                prev_dice2 = 8;
+                            }
                         }
                         else if (n + prev_dice2 == 9) {
                             Platform.runLater(() -> label_9.setGraphic(guti2_label));
@@ -634,7 +710,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 27) {
                             Platform.runLater(() -> label_27.setGraphic(guti2_label));
-                            prev_dice2 = 27;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 27) {
+                                Platform.runLater(() -> label_77.setGraphic(guti2_label));
+                                prev_dice2 = 77;
+                            } else {
+                                prev_dice2 = 27;
+                            }
                         }
                         else if (n + prev_dice2 == 28) {
                             Platform.runLater(() -> label_28.setGraphic(guti2_label));
@@ -650,7 +732,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 31) {
                             Platform.runLater(() -> label_31.setGraphic(guti2_label));
-                            prev_dice2 = 31;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 31) {
+                                Platform.runLater(() -> label_10.setGraphic(guti2_label));
+                                prev_dice2 = 10;
+                            } else {
+                                prev_dice2 = 31;
+                            }
                         }
                         else if (n + prev_dice2 == 32) {
                             Platform.runLater(() -> label_32.setGraphic(guti2_label));
@@ -682,7 +770,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 39) {
                             Platform.runLater(() -> label_39.setGraphic(guti2_label));
-                            prev_dice2 = 39;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 39) {
+                                Platform.runLater(() -> label_60.setGraphic(guti2_label));
+                                prev_dice2 = 60;
+                            } else {
+                                prev_dice2 = 39;
+                            }
                         }
                         else if (n + prev_dice2 == 40) {
                             Platform.runLater(() -> label_40.setGraphic(guti2_label));
@@ -738,7 +832,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 53) {
                             Platform.runLater(() -> label_53.setGraphic(guti2_label));
-                            prev_dice2 = 53;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 53) {
+                                Platform.runLater(() -> label_81.setGraphic(guti2_label));
+                                prev_dice2 = 81;
+                            } else {
+                                prev_dice2 = 53;
+                            }
                         }
                         else if (n + prev_dice2 == 54) {
                             Platform.runLater(() -> label_54.setGraphic(guti2_label));
@@ -758,7 +858,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 58) {
                             Platform.runLater(() -> label_58.setGraphic(guti2_label));
-                            prev_dice2 = 58;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 58) {
+                                Platform.runLater(() -> label_28.setGraphic(guti2_label));
+                                prev_dice2 = 28;
+                            } else {
+                                prev_dice2 = 58;
+                            }
                         }
                         else if (n + prev_dice2 == 59) {
                             Platform.runLater(() -> label_59.setGraphic(guti2_label));
@@ -786,7 +892,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 65) {
                             Platform.runLater(() -> label_65.setGraphic(guti2_label));
-                            prev_dice2 = 65;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 65) {
+                                Platform.runLater(() -> label_23.setGraphic(guti2_label));
+                                prev_dice2 = 23;
+                            } else {
+                                prev_dice2 = 65;
+                            }
                         }
                         else if (n + prev_dice2 == 66) {
                             Platform.runLater(() -> label_66.setGraphic(guti2_label));
@@ -846,7 +958,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 80) {
                             Platform.runLater(() -> label_80.setGraphic(guti2_label));
-                            prev_dice2 = 80;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 80) {
+                                Platform.runLater(() -> label_38.setGraphic(guti2_label));
+                                prev_dice2 = 38;
+                            } else {
+                                prev_dice2 = 80;
+                            }
                         }
                         else if (n + prev_dice2 == 81) {
                             Platform.runLater(() -> label_81.setGraphic(guti2_label));
@@ -866,7 +984,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 85) {
                             Platform.runLater(() -> label_85.setGraphic(guti2_label));
-                            prev_dice2 = 85;
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 85) {
+                                Platform.runLater(() -> label_51.setGraphic(guti2_label));
+                                prev_dice2 = 51;
+                            } else {
+                                prev_dice2 = 85;
+                            }
                         }
                         else if (n + prev_dice2 == 86) {
                             Platform.runLater(() -> label_86.setGraphic(guti2_label));
@@ -914,8 +1038,13 @@ public class Snake_Ladder {
                         }
                         else if (n + prev_dice2 == 97) {
                             Platform.runLater(() -> label_97.setGraphic(guti2_label));
-                            prev_dice2 = 97;
-
+                            Thread.sleep(1000);
+                            if (n + prev_dice2 == 97) {
+                                Platform.runLater(() -> label_15.setGraphic(guti2_label));
+                                prev_dice2 = 15;
+                            } else {
+                                prev_dice2 = 97;
+                            }
                         }
                         else if (n + prev_dice2 == 98) {
                             Platform.runLater(() -> label_98.setGraphic(guti2_label));
@@ -934,7 +1063,7 @@ public class Snake_Ladder {
                         }
                     }
                 }
-            } catch (IOException io) {
+            } catch (IOException | InterruptedException io) {
                 io.printStackTrace();
             }
         }
