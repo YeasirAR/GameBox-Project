@@ -29,7 +29,10 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <TextArea fx:id="Chat_Area" layoutX="33.0" layoutY="140.0" prefHeight="411.0" prefWidth="200.0" />
+            <TextArea fx:id="Chat_Area" editable="false" layoutX="33.0" layoutY="140.0" prefHeight="411.0" prefWidth="200.0">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font></TextArea>
          </children>
       </Pane>
       <Label layoutX="419.0" layoutY="43.0" text="Snake Ladder">

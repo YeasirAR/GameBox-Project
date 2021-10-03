@@ -39,7 +39,7 @@ public class Snake_Ladder {
     public BufferedWriter writer;
     public BufferedReader reader;
     String Player;
-
+    String Player_name;
 
     public Snake_Ladder(){
         Socket sc = null;
@@ -57,6 +57,7 @@ public class Snake_Ladder {
     public void initialize() {
         try {
             Player = reader.readLine();
+            Player_name = reader.readLine();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -64,7 +65,14 @@ public class Snake_Ladder {
     }
     @FXML
     private void send_button(){
-
+        try{
+            writer.write("Send Message\n");
+            writer.write(Player_name+ ": " +send_msg.getText()+ "\n");
+            writer.flush();
+            send_msg.clear();
+        }catch (IOException io){
+            io.printStackTrace();
+        }
     }
     @FXML
     private void restart(){
@@ -98,7 +106,7 @@ public class Snake_Ladder {
 
                     if (str1.equals("Send Message")){
                         String str2 = reader.readLine();
-                        Platform.runLater(() -> Chat_Area.appendText(Player+": "+str2+"\n"));
+                        Platform.runLater(() -> Chat_Area.appendText(str2+"\n"));
                     }
                     ////PLayer1
                     else if(str1.equals("Player1")){

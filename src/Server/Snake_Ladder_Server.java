@@ -6,7 +6,10 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Snake_Ladder_Server {
-    static String str = "Player1";
+    final static ArrayList<Users>gamers = Server.ServerMain.getList();
+    static String Player = "Player1";
+    static String gamer1 = gamers.get(0).username;
+    static String gamer2 = gamers.get(1).username;
     Snake_Ladder_Server(){
         try{
             ServerSocket server_socket = new ServerSocket(6603);
@@ -42,14 +45,14 @@ class Server_snake implements Runnable{
     @Override
     public void run() {
         try {
-            writer.write(Snake_Ladder_Server.str+"\n");
-            Snake_Ladder_Server.str = "Player2";
+            writer.write(Snake_Ladder_Server.Player +"\n");
+            Snake_Ladder_Server.Player = "Player2";
+            writer.write(Snake_Ladder_Server.gamer1+ "\n");
+            Snake_Ladder_Server.gamer1 = Snake_Ladder_Server.gamer2;
             writer.flush();
             while (true) {
                 String str1 = reader.readLine();
                 String str2 = reader.readLine();
-                System.out.println(str1);
-                System.out.println(str2);
                 synchronized (clients) {
                     for (Server_snake s : clients) {
                         s.writer.write(str1 + "\n");
