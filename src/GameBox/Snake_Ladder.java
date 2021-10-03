@@ -34,6 +34,8 @@ public class Snake_Ladder {
     @FXML
     Label turn;
     @FXML
+    Label reset1,reset2;
+    @FXML
     Pane Player1,Player2, block_roll;
 
     public BufferedWriter writer;
@@ -79,7 +81,13 @@ public class Snake_Ladder {
     }
     @FXML
     private void restart(){
-
+        prev_dice1 = 0;
+        prev_dice2 = 0;
+        Platform.runLater(() -> reset1.setGraphic(guti1_label));
+        Platform.runLater(() -> reset2.setGraphic(guti2_label));
+        Player1.setVisible(false);
+        Player2.setVisible(false);
+        block_roll.setVisible(false);
     }
     @FXML
     private void exit(){
