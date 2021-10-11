@@ -1,14 +1,17 @@
 package GameBox;import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Optional;
+import java.util.Objects;
 
 public class Tic_Tac_Toe {
     @FXML
@@ -787,6 +790,14 @@ public class Tic_Tac_Toe {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    private void backToMain(ActionEvent e) throws IOException {
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GameSelectionFrame.fxml")));
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        window.setTitle("GameBox");
+        window.setScene(new Scene(parent, 900, 650));
+        window.show();
     }
     @FXML
     private void goBackTicTacToe(){
