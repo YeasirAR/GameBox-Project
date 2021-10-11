@@ -3,7 +3,10 @@ package GameBox;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -12,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.Objects;
 import java.util.Random;
 
 public class Snake_Ladder {
@@ -81,6 +85,14 @@ public class Snake_Ladder {
         }catch (IOException io){
             io.printStackTrace();
         }
+    }
+    @FXML
+    private void backToMain(ActionEvent e) throws IOException {
+        Parent parent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("GameSelectionFrame.fxml")));
+        Stage window = (Stage) ((Node) e.getSource()).getScene().getWindow();
+        window.setTitle("GameBox");
+        window.setScene(new Scene(parent, 900, 650));
+        window.show();
     }
     @FXML
     private void restart(){

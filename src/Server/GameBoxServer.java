@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class GameBoxServer{
     static int ins1 = 1;
+    static int ins2 = 1;
     public static void main(String[] args) {
         try {
             ServerSocket serverSocket = new ServerSocket(6601);
@@ -82,8 +83,8 @@ class ServerMain implements Runnable{
                     }
                 }
                 if(str.equals("Snake Ladder")){
-                    if(GameBoxServer.ins1==1){
-                        GameBoxServer.ins1++;
+                    if(GameBoxServer.ins2==1){
+                        GameBoxServer.ins2++;
                         new Snake_Ladder_Server();
                     }
                 }
