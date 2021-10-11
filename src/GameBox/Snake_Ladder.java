@@ -103,6 +103,7 @@ public class Snake_Ladder {
         Player1.setVisible(false);
         Player2.setVisible(false);
         block_roll.setVisible(false);
+        dice.setText("DICE");
     }
     @FXML
     public void exit(ActionEvent actionEvent) {
