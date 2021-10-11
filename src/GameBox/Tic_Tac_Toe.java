@@ -218,6 +218,23 @@ public class Tic_Tac_Toe {
                             Chat_List.appendText(str2+"\n");
                         });
                     }
+                    if (str1.equals("Start 3x3")) {
+                        reader.readLine();
+                        Pane2.setVisible(false);
+                        Pane3.setVisible(true);
+                    }
+                    if (str1.equals("Start 4x4")) {
+                        reader.readLine();
+                        Pane2.setVisible(false);
+                        Pane4.setVisible(true);
+                    }
+                    if (str1.equals("Back To Tic Tac Toe")) {
+                        reader.readLine();
+                        Pane2.setVisible(true);
+                        Pane3.setVisible(false);
+                    }
+
+
 
                     if (str1.equals("button1")) {
                         String str2 = reader.readLine();
@@ -226,7 +243,7 @@ public class Tic_Tac_Toe {
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button2")) {
+                    else if (str1.equals("button2")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button2.setText(str2);
@@ -234,7 +251,7 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button3")) {
+                    else if (str1.equals("button3")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button3.setText(str2);
@@ -242,7 +259,7 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button4")) {
+                    else if (str1.equals("button4")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button4.setText(str2);
@@ -250,7 +267,7 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button5")) {
+                    else if (str1.equals("button5")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button5.setText(str2);
@@ -258,7 +275,7 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button6")) {
+                    else if (str1.equals("button6")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button6.setText(str2);
@@ -266,7 +283,7 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button7")) {
+                    else if (str1.equals("button7")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button7.setText(str2);
@@ -274,126 +291,126 @@ public class Tic_Tac_Toe {
                         });
 
                     }
-                    if (str1.equals("button8")) {
+                    else if (str1.equals("button8")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button8.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button9")) {
+                    else if (str1.equals("button9")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button9.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button11")) {
+                    else if (str1.equals("button11")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button11.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button12")) {
+                    else if (str1.equals("button12")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button12.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button13")) {
+                    else if (str1.equals("button13")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button13.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button14")) {
+                    else if (str1.equals("button14")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button14.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button15")) {
+                    else if (str1.equals("button15")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button15.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button16")) {
+                    else if (str1.equals("button16")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button16.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button17")) {
+                    else if (str1.equals("button17")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button17.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button18")) {
+                    else if (str1.equals("button18")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button18.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button19")) {
+                    else if (str1.equals("button19")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button19.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button20")) {
+                    else if (str1.equals("button20")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button20.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button21")) {
+                    else if (str1.equals("button21")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button21.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button22")) {
+                    else if (str1.equals("button22")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button22.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button23")) {
+                    else if (str1.equals("button23")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button23.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button24")) {
+                    else if (str1.equals("button24")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button24.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button25")) {
+                    else if (str1.equals("button25")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button25.setText(str2);
                             checkWinner();
                         });
                     }
-                    if (str1.equals("button26")) {
+                    else if (str1.equals("button26")) {
                         String str2 = reader.readLine();
                         Platform.runLater(() -> {
                             button26.setText(str2);
@@ -763,13 +780,37 @@ public class Tic_Tac_Toe {
 
     @FXML
     private void start_game() {
-        Pane2.setVisible(false);
-        Pane3.setVisible(true);
+        try {
+            writer.write("Start 3x3\n");
+            writer.write("Discard Text\n");
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void goBackTicTacToe(){
+        try {
+            writer.write("Back To Tic Tac Toe\n");
+            writer.write("Discard Text\n");
+            writer.flush();
+            writer.write("restart\n");
+            writer.write("Discard Text\n");
+            writer.flush();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     @FXML
     private void start_game_4x4() {
-        Pane2.setVisible(false);
-        Pane4.setVisible(true);
+        try {
+            writer.write("Start 4x4\n");
+            writer.write("Discard Text\n");
+            writer.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     private void WinDialog() {
         Alert dialog = new Alert(Alert.AlertType.INFORMATION);
