@@ -10,37 +10,41 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="986.0" style="-fx-background-color: #E4E978;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Snake_Ladder">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="928.0" style="-fx-background-color: #E4E978;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameBox.Snake_Ladder">
    <children>
-      <Pane prefHeight="666.0" prefWidth="259.0" style="-fx-background-color: #D37815;">
+      <Pane prefHeight="666.0" prefWidth="227.0" style="-fx-background-color: #D37815;">
          <children>
-            <Label layoutX="52.0" layoutY="41.0" prefHeight="53.0" prefWidth="196.0" text="Discussion">
+            <Label layoutX="16.0" layoutY="42.0" prefHeight="53.0" prefWidth="196.0" text="Discussion" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
             </Label>
-            <TextField fx:id="send_msg" layoutX="20.0" layoutY="583.0" prefHeight="33.0" prefWidth="178.0" promptText="write here" style="-fx-background-color: #FCF7F7;">
+            <TextField fx:id="send_msg" layoutY="586.0" prefHeight="33.0" prefWidth="171.0" promptText="write here" style="-fx-background-color: #FCF7F7;">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>
             </TextField>
-            <Button layoutX="198.0" layoutY="584.0" mnemonicParsing="false" onAction="#send_button" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: #A3D2CA;" text="send">
+            <Button layoutX="171.0" layoutY="587.0" mnemonicParsing="false" onAction="#send_button" prefHeight="32.0" prefWidth="52.0" style="-fx-background-color: #7FC8A9;" text="send">
                <font>
-                  <Font size="14.0" />
+                  <Font name="System Bold" size="14.0" />
                </font>
             </Button>
-            <TextArea fx:id="Chat_Area" editable="false" layoutX="33.0" layoutY="140.0" prefHeight="411.0" prefWidth="200.0">
+            <TextArea fx:id="Chat_Area" editable="false" layoutX="14.0" layoutY="140.0" prefHeight="411.0" prefWidth="178.0">
                <font>
                   <Font name="Arial Black" size="13.0" />
                </font></TextArea>
+            <Button layoutY="-3.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="15.0" prefWidth="46.0" style="-fx-background-color: #FF5C58;" text="&lt;" textFill="#eee8e8">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font></Button>
          </children>
       </Pane>
-      <Label layoutX="419.0" layoutY="43.0" text="Snake Ladder">
+      <Label layoutX="399.0" layoutY="43.0" text="Snake Ladder">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
-      <Pane layoutX="264.0" layoutY="109.0" prefHeight="500.0" prefWidth="554.0">
+      <Pane layoutX="236.0" layoutY="96.0" prefHeight="500.0" prefWidth="554.0">
          <children>
             <ImageView fitHeight="544.0" fitWidth="560.0" layoutX="-3.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -593,47 +597,46 @@
             </Pane>
          </children>
       </Pane>
-      <Pane layoutX="824.0" prefHeight="666.0" prefWidth="169.0" style="-fx-background-color: #D37815;">
+      <Pane layoutX="796.0" prefHeight="666.0" prefWidth="133.0" style="-fx-background-color: #D37815;">
          <children>
-            <Button layoutX="42.0" layoutY="209.0" mnemonicParsing="false" onAction="#roll" prefHeight="44.0" prefWidth="68.0" style="-fx-background-color: #1D1E08;" text="Roll" textFill="WHITE">
+            <Button layoutX="33.0" layoutY="215.0" mnemonicParsing="false" onAction="#roll" prefHeight="44.0" prefWidth="61.0" style="-fx-background-color: #1D1E08;" text="Roll" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
-            <Label fx:id="dice" layoutX="45.0" layoutY="124.0" prefHeight="65.0" prefWidth="61.0" style="-fx-background-color: #000000;" text="Dice" textFill="#eeedea">
+            <Label fx:id="dice" layoutX="33.0" layoutY="124.0" prefHeight="65.0" prefWidth="61.0" style="-fx-background-color: #000000;" text="Dice" textFill="#eeedea">
                <font>
                   <Font name="System Bold" size="29.0" />
                </font>
             </Label>
-            <Label fx:id="turn" layoutX="5.0" layoutY="298.0" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #FFFFFF;" text="Roll the Dice" textFill="#24128c">
+            <Label fx:id="turn" layoutX="4.0" layoutY="297.0" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: #FFFFFF;" text="Roll the Dice" textFill="#24128c">
                <font>
-                  <Font name="Arial Black" size="20.0" />
+                  <Font name="Arial Black" size="17.0" />
                </font>
             </Label>
-            <Pane fx:id="block_roll" layoutX="10.0" layoutY="106.0" prefHeight="153.0" prefWidth="147.0" style="-fx-background-color: #D37815;" visible="false" />
-            <Button layoutX="45.0" layoutY="605.0" mnemonicParsing="false" onAction="#backToMain" style="-fx-background-color: #A3D2CA;" text="Back to Main" />
+            <Pane fx:id="block_roll" layoutX="10.0" layoutY="106.0" prefHeight="160.0" prefWidth="109.0" style="-fx-background-color: #D37815;" visible="false" />
          </children>
       </Pane>
-      <Label fx:id="guti1_label" layoutX="410.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #FF0000;" text="1" textAlignment="JUSTIFY">
+      <Label fx:id="guti1_label" layoutX="378.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #FF0000;" text="1" textAlignment="JUSTIFY">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label fx:id="guti2_label" layoutX="701.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #3DB2FF;" text="2">
+      <Label fx:id="guti2_label" layoutX="685.0" layoutY="626.0" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #3DB2FF; -fx-border-radius: 30;" text="2">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="349.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #FF0000;" text="Player 1 :">
+      <Label layoutX="317.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #FF0000;" text="Player 1 :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="640.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #3DB2FF;" text="Player 2 :">
+      <Label layoutX="624.0" layoutY="626.0" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #3DB2FF;" text="Player 2 :">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="reset1" layoutX="410.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
-      <Label layoutX="701.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
+      <Label fx:id="reset1" layoutX="378.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
+      <Label layoutX="685.0" layoutY="619.0" prefHeight="39.0" prefWidth="28.0" />
    </children>
 </Pane>
