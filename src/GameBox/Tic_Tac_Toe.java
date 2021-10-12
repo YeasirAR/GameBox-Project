@@ -203,8 +203,8 @@ public class Tic_Tac_Toe {
                         String tmpName = reader.readLine();
                         if(!name.equals(tmpName)){
                             Platform.runLater(() -> {
-                                isTurn.setText("Your Turn");
-                                isTurn4x4.setText("Your Turn");
+                                isTurn.setText("YOUR TURN");
+                                isTurn4x4.setText("YOUR TURN");
                             });
                         }
                         else {
