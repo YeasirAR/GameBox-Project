@@ -98,8 +98,8 @@ public class Snake_Ladder {
     private void restart(){
         prev_dice1 = 0;
         prev_dice2 = 0;
-        Platform.runLater(() -> reset1.setGraphic(guti1_label));
-        Platform.runLater(() -> reset2.setGraphic(guti2_label));
+        reset1.setGraphic(guti1_label);
+        reset2.setGraphic(guti2_label);
         Player1.setVisible(false);
         Player2.setVisible(false);
         block_roll.setVisible(false);
@@ -444,7 +444,7 @@ public class Snake_Ladder {
                             Platform.runLater(() -> label_65.setGraphic(guti1_label));
                             Thread.sleep(1000);
                             if(n+prev_dice1 == 65){
-                                Platform.runLater(() -> label_60.setGraphic(guti1_label));
+                                Platform.runLater(() -> label_23.setGraphic(guti1_label));
                                 prev_dice1 = 23;
                             }
                             else {
