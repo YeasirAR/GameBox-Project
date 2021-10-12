@@ -235,6 +235,7 @@ public class Tic_Tac_Toe {
                         reader.readLine();
                         Pane2.setVisible(true);
                         Pane3.setVisible(false);
+                        Pane4.setVisible(false);
                     }
 
 

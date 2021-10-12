@@ -123,6 +123,7 @@ public class MainController {
                     t.start();
 
                 } else {
+                    login_failed.setText("Please Enter Valid Info");
                     login_failed.setVisible(true);
                 }
             } catch (IOException ex) {

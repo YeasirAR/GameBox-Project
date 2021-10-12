@@ -11,21 +11,21 @@
    <children>
       <Pane fx:id="Pane1" layoutY="-12.0" prefHeight="662.0" prefWidth="324.0" style="-fx-background-color: #AAADB3;">
          <children>
-            <TextArea fx:id="Chat_List" editable="false" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0">
+            <TextArea fx:id="Chat_List" editable="false" focusTraversable="false" layoutX="24.0" layoutY="155.0" prefHeight="385.0" prefWidth="279.0">
                <font>
                   <Font size="20.0" />
                </font></TextArea>
-            <TextField fx:id="Send_Msg" layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
+            <TextField fx:id="Send_Msg" focusTraversable="false" layoutX="25.0" layoutY="559.0" prefHeight="45.0" prefWidth="204.0" promptText="write here">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <Button layoutX="234.0" layoutY="559.0" mnemonicParsing="false" onAction="#Send_Msg_Method" prefHeight="45.0" prefWidth="70.0" text="Send">
+            <Button focusTraversable="false" layoutX="234.0" layoutY="559.0" mnemonicParsing="false" onAction="#Send_Msg_Method" prefHeight="45.0" prefWidth="70.0" text="Send">
                <font>
                   <Font size="19.0" />
                </font>
             </Button>
-            <Label layoutX="94.0" layoutY="67.0" prefHeight="53.0" prefWidth="260.0" text="Discussion " textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="94.0" layoutY="67.0" prefHeight="53.0" prefWidth="260.0" text="Discussion " textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
@@ -34,32 +34,32 @@
       </Pane>
       <Pane fx:id="Pane2" layoutX="323.0" layoutY="-96.0" prefHeight="842.0" prefWidth="706.0">
          <children>
-            <Label layoutX="107.0" layoutY="164.0" prefHeight="73.0" prefWidth="338.0" text="TIC TAC TOE" textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="107.0" layoutY="164.0" prefHeight="73.0" prefWidth="338.0" text="TIC TAC TOE" textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="50.0" />
                </font>
             </Label>
-            <Button layoutX="149.0" layoutY="376.0" mnemonicParsing="false" onAction="#start_game" prefHeight="65.0" prefWidth="241.0" text="3x3 Grid GAME">
+            <Button focusTraversable="false" layoutX="149.0" layoutY="376.0" mnemonicParsing="false" onAction="#start_game" prefHeight="65.0" prefWidth="241.0" text="3x3 Grid GAME">
                <font>
                   <Font size="28.0" />
                </font>
             </Button>
-            <Label layoutX="73.0" layoutY="289.0" prefHeight="46.0" prefWidth="393.0" text="Please Select Any Mode " textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="73.0" layoutY="289.0" prefHeight="46.0" prefWidth="393.0" text="Please Select Any Mode " textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
             </Label>
-            <Button layoutX="149.0" layoutY="486.0" mnemonicParsing="false" onAction="#start_game_4x4" prefHeight="65.0" prefWidth="241.0" text="4x4 Grid GAME">
+            <Button focusTraversable="false" layoutX="149.0" layoutY="486.0" mnemonicParsing="false" onAction="#start_game_4x4" prefHeight="65.0" prefWidth="241.0" text="4x4 Grid GAME">
                <font>
                   <Font size="28.0" />
                </font>
             </Button>
-            <Button layoutX="319.0" layoutY="623.0" mnemonicParsing="false" onAction="#exit" prefHeight="65.0" prefWidth="162.0" text="Exit">
+            <Button focusTraversable="false" layoutX="319.0" layoutY="623.0" mnemonicParsing="false" onAction="#exit" prefHeight="65.0" prefWidth="162.0" text="Exit">
                <font>
                   <Font size="28.0" />
                </font>
             </Button>
-            <Button layoutX="87.0" layoutY="623.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="65.0" prefWidth="146.0" text="Back">
+            <Button focusTraversable="false" layoutX="87.0" layoutY="623.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="65.0" prefWidth="146.0" text="Back">
                <font>
                   <Font size="28.0" />
                </font>
@@ -68,7 +68,7 @@
       </Pane>
       <Pane fx:id="Pane3" layoutX="323.0" layoutY="-96.0" prefHeight="842.0" prefWidth="706.0" visible="false">
          <children>
-            <Label layoutX="153.0" layoutY="119.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="153.0" layoutY="119.0" prefHeight="53.0" prefWidth="260.0" text="Tic Tac Toe" textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>
@@ -128,7 +128,7 @@
                   <Font size="21.0" />
                </font>
             </Button>
-            <Label fx:id="isTurn" layoutX="204.0" layoutY="580.0" prefHeight="46.0" prefWidth="195.0" textFill="#ff0b0b">
+            <Label fx:id="isTurn" focusTraversable="false" layoutX="204.0" layoutY="580.0" prefHeight="46.0" prefWidth="195.0" textFill="#ff0b0b">
                <font>
                   <Font size="31.0" />
                </font>
@@ -137,7 +137,7 @@
       </Pane>
       <Pane fx:id="Pane4" layoutX="333.0" layoutY="-86.0" prefHeight="842.0" prefWidth="706.0" visible="false">
          <children>
-            <Label layoutX="143.0" layoutY="96.0" prefHeight="53.0" prefWidth="260.0" text="TIC TAC TOE" textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="143.0" layoutY="96.0" prefHeight="53.0" prefWidth="260.0" text="TIC TAC TOE" textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="44.0" />
                </font>
@@ -152,12 +152,12 @@
                   <Font size="21.0" />
                </font>
             </Button>
-            <Button focusTraversable="false" layoutX="298.0" layoutY="671.0" mnemonicParsing="false" onAction="#goBackTicTacToe" prefHeight="45.0" prefWidth="162.0" text="Back" visible="false">
+            <Button focusTraversable="false" layoutX="298.0" layoutY="671.0" mnemonicParsing="false" onAction="#goBackTicTacToe" prefHeight="45.0" prefWidth="162.0" text="Back">
                <font>
                   <Font size="21.0" />
                </font>
             </Button>
-            <Label fx:id="isTurn1" layoutX="222.0" layoutY="584.0" textFill="#ff0b0b">
+            <Label fx:id="isTurn1" focusTraversable="false" layoutX="222.0" layoutY="584.0" textFill="#ff0b0b">
                <font>
                   <Font size="31.0" />
                </font>
@@ -237,7 +237,7 @@
                   <Font size="33.0" />
                </font>
             </Button>
-            <Label fx:id="isTurn4x4" layoutX="191.0" layoutY="618.0" prefHeight="53.0" prefWidth="260.0" textFill="#1e2225">
+            <Label fx:id="isTurn4x4" focusTraversable="false" layoutX="191.0" layoutY="618.0" prefHeight="53.0" prefWidth="260.0" textFill="RED">
                <font>
                   <Font name="System Bold" size="31.0" />
                </font>
