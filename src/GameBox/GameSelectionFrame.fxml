@@ -26,7 +26,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Label focusTraversable="false" layoutX="87.0" layoutY="76.0" prefHeight="53.0" prefWidth="260.0" text="Discussion " textFill="#1e2225">
+            <Label focusTraversable="false" layoutX="85.0" layoutY="77.0" prefHeight="53.0" prefWidth="260.0" text="DISCUSSION" textFill="#1e2225">
                <font>
                   <Font name="System Bold" size="36.0" />
                </font>
